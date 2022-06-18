@@ -6,6 +6,7 @@ import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import React, { useEffect, useState } from "react";
 import HeaderItem from "../components/HeaderItem";
+import { MenuIcon } from "@heroicons/react/outline";
 
 export default function Home() {
   const [menu, setMenu] = useState("Home");
@@ -13,6 +14,10 @@ export default function Home() {
   const [doc, setDoc] = useState("/Droppin.pdf");
   return (
     <div className="flex w-screen h-screen absolute">
+      <div className="h-fit w-fit absolute ml-[92vw] mt-8">
+        <MenuIcon className="h-10 w-10   text-white" />
+      </div>
+
       <Image
         src="/Background.png"
         layout="fill"
@@ -32,9 +37,9 @@ export default function Home() {
       </div>
 
       {menu == "Home" ? (
-        <div>
-          <header className="h-[100vh] bg-transparent  flex flex-col absolute">
-            <div className="flex space-y-3 flex-col ml-20 mb-11 z-50 h-full justify-end">
+        <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
+          <header className=" mb-11 border-l-4 border-l-white ml-28 h-44 w-[15vw]   flex flex-col absolute">
+            <div className="flex space-y-3 flex-col   z-50 h-full justify-end">
               <div>
                 <HeaderItem title="Home" active={true} />
               </div>
@@ -77,9 +82,9 @@ export default function Home() {
 
       <div>
         {menu == "Work" ? (
-          <div>
-            <header className="h-[100vh] bg-transparent  flex flex-col absolute">
-              <div className="flex space-y-3 flex-col ml-20 mb-11 z-50 h-full justify-end  ">
+          <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
+            <header className=" mb-11 border-l-4 border-l-white ml-28 h-44 w-[15vw]   flex flex-col absolute">
+              <div className="flex space-y-3 flex-col  z-50 h-full justify-end  ">
                 <div>
                   <HeaderItem
                     title="Home"
@@ -130,9 +135,9 @@ export default function Home() {
                       setScale(1.1);
                       console.log(scale);
                     }}
-                    className="helv font-extrabold text-white text-6xl opacity-50 hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px] hover:cursor-pointer"
+                    className="ml-[100vw] b helv font-extrabold text-white text-6xl opacity-50 hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px] hover:cursor-pointer"
                   >
-                    DROPPIN
+                    DROPIN
                   </h1>
                 }
                 modal
@@ -170,7 +175,7 @@ export default function Home() {
                       console.log(scale);
                     }}
                   >
-                    <h1 className="helv font-extrabold text-white text-6xl opacity-50  hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px]  hover:cursor-pointer">
+                    <h1 className="helv ml-[100vw] font-extrabold text-white text-6xl opacity-50  hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px]  hover:cursor-pointer">
                       EDEN
                     </h1>
                   </div>
@@ -200,9 +205,9 @@ export default function Home() {
           </div>
         ) : null}
         {menu == "About" ? (
-          <div>
-            <header className="h-[100vh] bg-transparent  flex flex-col absolute">
-              <div className="flex space-y-3 flex-col ml-20 mb-11 z-50 h-full justify-end  ">
+          <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
+            <header className=" mb-11 border-l-4 border-l-white ml-28 h-44 w-[15vw]   flex flex-col absolute">
+              <div className="flex space-y-3 flex-col z-50 h-full justify-end  ">
                 <div>
                   <HeaderItem
                     title="Home"
@@ -237,9 +242,9 @@ export default function Home() {
           </div>
         ) : null}
         {menu == "Contact" ? (
-          <div>
-            <header className="h-[100vh] bg-transparent  flex flex-col absolute">
-              <div className="flex space-y-3 flex-col ml-20 mb-11 z-50 h-full justify-end  ">
+          <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
+            <header className=" mb-11 border-l-4 border-l-white ml-28 h-44 w-[15vw]   flex flex-col absolute">
+              <div className="flex space-y-3 flex-col  z-50 h-full justify-end  ">
                 <div>
                   <HeaderItem
                     title="Home"
@@ -273,13 +278,6 @@ export default function Home() {
             <h1>C'est le Contact</h1>
           </div>
         ) : null}
-
-        <Image
-          src="/AVENSTUDIO_ADS.png"
-          layout="fill"
-          objectFit="none"
-          className="mt-4"
-        />
       </div>
     </div>
   );
