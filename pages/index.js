@@ -144,7 +144,7 @@ export default function Home() {
                 nested
               >
                 {(close) => (
-                  <div className=" w-[47vw] bg-red-500 text-xs flex-col items-center justify-center overflow-y-scroll scrollbar-hide ">
+                  <div className=" w-[47vw] bg-red-500 text-transparent text-xs flex-col items-center justify-center overflow-y-scroll scrollbar-hide ">
                     <button
                       className=" text-white text-xl close -right-6 absolute"
                       onClick={close}
