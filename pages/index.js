@@ -240,11 +240,11 @@ export default function Home() {
             </header>
             <div className="text-white text-xl ml-[54vw] mb-[22vh]  absolute  w-1/3 h-1/5">
               <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book. It has
-                survived not only five centuries, but also the leap into
+                True innovation starts by listening to and addressing the
+                individual needs of our clients. We are pioneers and believe
+                that collaborating throughout the project results in elegant and
+                award-winning identity that perform and express your corporate
+                culture, today and in the future.
               </p>
             </div>
 
