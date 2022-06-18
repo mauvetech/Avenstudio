@@ -253,7 +253,7 @@ export default function Home() {
             >
               <Image src="/LOGO.png" layout="fill" objectFit="cover" />
             </div>
-            <div className="text-white text-xl  ml-[17vw] mb-[30vh]  absolute 2xl:w-1/3  2xl:ml-[33.5vw]  w-2/3 h-1/5">
+            <div className="text-white text-xl  ml-[17vw] mb-[30vh]  absolute 2xl:w-1/4  2xl:ml-[38vw]  w-2/3 h-1/5">
               <p className=" text-center">
                 Our Amazing People When you partner with AVS, you’re partnering
                 with our people. We are a talented mix of strategic visionaries,
