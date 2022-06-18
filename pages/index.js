@@ -144,7 +144,7 @@ export default function Home() {
                 nested
               >
                 {(close) => (
-                  <div className=" w-[47vw] bg-red-500 text-transparent text-xs flex-col items-center justify-center overflow-y-scroll scrollbar-hide ">
+                  <div className=" w-[47vw]  text-transparent text-xs flex-col items-center justify-center overflow-y-scroll scrollbar-hide ">
                     <button
                       className=" text-white text-xl close -right-6 absolute"
                       onClick={close}
@@ -192,7 +192,7 @@ export default function Home() {
                       &times;
                     </button>
 
-                    <div className=" h-[90vh] w-[47vw] content flex-col items-center justify-center overflow-y-scroll scrollbar-hide">
+                    <div className=" h-[90vh] w-[47vw] content text-transparent flex-col items-center justify-center overflow-y-scroll scrollbar-hide">
                       <span>
                         <Pdfviewer doc={doc} scale={scale} />
                       </span>
