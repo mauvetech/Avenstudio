@@ -75,6 +75,15 @@ export default function Home() {
             layout="fill"
             objectFit="cover"
           />
+          <div className="text-white text-xl ml-[54vw] mb-[22vh]  absolute  w-1/3 h-1/5">
+            <p>
+              True innovation starts by listening to and addressing the
+              individual needs of our clients. We are pioneers and believe that
+              collaborating throughout the project results in elegant and
+              award-winning identity that perform and express your corporate
+              culture, today and in the future.
+            </p>
+          </div>
         </div>
       ) : null}
 
@@ -176,7 +185,7 @@ export default function Home() {
                     }}
                   >
                     <h1 className="helv ml-[100vw] font-extrabold text-white text-6xl opacity-50  hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px]  hover:cursor-pointer">
-                      EDEN
+                      EDENA
                     </h1>
                   </div>
                 }
@@ -238,21 +247,21 @@ export default function Home() {
                 </div>
               </div>
             </header>
-            <div className="text-white text-xl ml-[54vw] mb-[22vh]  absolute  w-1/3 h-1/5">
-              <p>
-                True innovation starts by listening to and addressing the
-                individual needs of our clients. We are pioneers and believe
-                that collaborating throughout the project results in elegant and
-                award-winning identity that perform and express your corporate
-                culture, today and in the future.
+            <div
+              className="
+                absolute h-[100vh] w-[100vw] mb-12 bg-transparent "
+            >
+              <Image src="/LOGO.png" layout="fill" objectFit="cover" />
+            </div>
+            <div className="text-white text-xl ml-[17vw] mb-[30vh]  absolute  w-2/3 h-1/5">
+              <p className=" text-center">
+                Our Amazing People When you partner with AVS, you’re partnering
+                with our people. We are a talented mix of strategic visionaries,
+                tech geeks, artistics directors, and designers who love
+                marketing and live life to the fullest. If this sounds like you,
+                we should chat !
               </p>
             </div>
-
-            <Image
-              src="/AVENSTUDIO_GROS_LOGO3.png"
-              layout="fill"
-              objectFit="cover"
-            />
           </div>
         ) : null}
         {menu == "Contact" ? (
