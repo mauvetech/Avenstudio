@@ -1,16 +1,58 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://use.typekit.net/vuf5eyn.css");
+@import url("http://fonts.cdnfonts.com/css/helvetica-neue-9");
+@import url("http://fonts.cdnfonts.com/css/badelion");
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
+@layer base {
+  html {
+    font-family: "arial";
+
+    font-style: normal;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.myriad {
+  font-family: "myriad-pro", sans-serif;
+
+  font-weight: 400;
+
+  font-style: normal;
 }
 
-* {
-  box-sizing: border-box;
+.popup-content {
+  margin: auto;
+  background: rgb(255, 255, 255);
+  width: 50%;
+  padding: 0px;
+}
+.popup-arrow {
+  color: rgb(255, 255, 255);
+}
+[role="tooltip"].popup-content {
+  width: 200px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 0px 3px;
+}
+
+.popup-overlay {
+  background: rgba(0, 0, 0, 0.5);
+}
+[data-popup="tooltip"].popup-overlay {
+  background: transparent;
+}
+
+/* Overwrite the default to keep the scrollbar always visible */
+
+::-webkit-scrollbar {
+  -webkit-appearance: none;
+  width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
 }
