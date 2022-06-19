@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="flex w-screen h-screen absolute">
       <div className="h-fit w-fit absolute ml-[92vw] mt-8">
-        <MenuIcon className="h-10 w-10   text-white" />
+        <MenuIcon className="h-6 w-6   text-white" />
       </div>
 
       <Image
@@ -38,8 +38,8 @@ export default function Home() {
 
       {menu == "Home" ? (
         <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-          <header className=" mb-11 border-l-4 border-l-white ml-28 h-44 w-[15vw]   flex flex-col absolute">
-            <div className="flex space-y-3 flex-col   z-50 h-full justify-end">
+          <header className=" mb-11 border-l-[2.8px] border-l-white ml-28 h-44 w-[15vw]    flex flex-col absolute">
+            <div className="flex space-y-3 flex-col -ml-6  z-50 h-full justify-end">
               <div>
                 <HeaderItem title="Home" active={true} />
               </div>
@@ -92,8 +92,8 @@ export default function Home() {
       <div>
         {menu == "Work" ? (
           <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-            <header className=" mb-11 border-l-4 border-l-white ml-28 h-44 w-[15vw]   flex flex-col absolute">
-              <div className="flex space-y-3 flex-col  z-50 h-full justify-end  ">
+            <header className="  mb-11 border-l-[2.8px] border-l-white ml-28 h-44 w-[15vw]    flex flex-col absolute">
+              <div className="flex -ml-6 space-y-3 flex-col  z-50 h-full justify-end  ">
                 <div>
                   <HeaderItem
                     title="Home"
@@ -144,7 +144,7 @@ export default function Home() {
                       setScale(1.1);
                       console.log(scale);
                     }}
-                    className="ml-[100vw] b helv font-extrabold text-white text-6xl opacity-50 hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px] hover:cursor-pointer"
+                    className="ml-[100vw]  helv font-extrabold text-white text-6xl opacity-50 hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px] hover:cursor-pointer"
                   >
                     DROPIN
                   </h1>
@@ -215,8 +215,8 @@ export default function Home() {
         ) : null}
         {menu == "About" ? (
           <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-            <header className=" mb-11 border-l-4 border-l-white ml-28 h-44 w-[15vw]   flex flex-col absolute">
-              <div className="flex space-y-3 flex-col z-50 h-full justify-end  ">
+            <header className="ml-28 mb-11 border-l-[2.8px] border-l-white  h-44 w-[15vw]    flex flex-col absolute">
+              <div className="flex -ml-6 space-y-3 flex-col z-50 h-full justify-end  ">
                 <div>
                   <HeaderItem
                     title="Home"
@@ -265,9 +265,9 @@ export default function Home() {
           </div>
         ) : null}
         {menu == "Contact" ? (
-          <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-            <header className=" mb-11 border-l-4 border-l-white ml-28 h-44 w-[15vw]   flex flex-col absolute">
-              <div className="flex space-y-3 flex-col  z-50 h-full justify-end  ">
+          <div className="h-[100vh] w-1/4 flex flex-col justify-end">
+            <header className="  mb-11 border-l-[2.8px] border-l-white ml-28 h-44 w-[15vw]    flex flex-col absolute">
+              <div className="flex space-y-3 flex-col -ml-6 z-50 h-full justify-end  ">
                 <div>
                   <HeaderItem
                     title="Home"
