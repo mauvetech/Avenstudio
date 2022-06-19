@@ -14,8 +14,8 @@ export default function Home() {
   const [doc, setDoc] = useState("/Droppin.pdf");
   return (
     <div className="flex w-screen h-screen absolute">
-      <div className="h-fit w-fit absolute ml-[92vw] mt-8">
-        <MenuIcon className="h-6 w-6   text-white" />
+      <div className="h-fit w-fit absolute ml-[95vw] mt-8">
+        <MenuIcon className="h-7   text-white" />
       </div>
 
       <Image
