@@ -13,9 +13,9 @@ export default function Home() {
   const [scale, setScale] = useState(1);
   const [doc, setDoc] = useState("/Droppin.pdf");
   return (
-    <div className="flex w-screen h-screen absolute">
-      <div className="h-fit w-fit absolute ml-[95vw] mt-8">
-        <MenuIcon className="h-7   text-white" />
+    <div className="flex w-screen h-screen absolute ">
+      <div className="h-fit w-fit absolute ml-[95vw] mt-[6vh]">
+        <MenuIcon className="h-[2vw]   text-white" />
       </div>
 
       <Image
@@ -32,14 +32,14 @@ export default function Home() {
       />
 
       {/*<img src="/vercel.svg" height={500} width={500} />*/}
-      <div className="absolute -left-[36vw] -top-[22vh] w-full h-3/5   ">
+      <div className="absolute -left-[36vw] -top-[22vh] w-full h-[60vh]   ">
         <Image src="/LOGO.png" layout="fill" objectFit="contain" />
       </div>
 
       {menu == "Home" ? (
         <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-          <header className=" mb-11 border-l-[2.8px] border-l-white ml-28 h-44 w-[15vw]    flex flex-col absolute">
-            <div className="flex space-y-3 flex-col -ml-6  z-50 h-full justify-end">
+          <header className=" lg:mb-[5vh] mb-[5vh] border-l-[2.8px] border-l-white lg:ml-[5vw] ml-[5vw]  h-fit     flex flex-col absolute">
+            <div className="flex space-y-3 flex-col  lg:-ml-[1vw] ml-[2vw] z-50 h-full justify-end">
               <div>
                 <HeaderItem title="Home" active={true} />
               </div>
@@ -74,8 +74,9 @@ export default function Home() {
             src="/AVENSTUDIO_GROS_LOGO3.png"
             layout="fill"
             objectFit="cover"
+            className="md:visible invisible"
           />
-          <div className="text-white text-xl ml-[54vw] mb-[22vh]  absolute  w-1/3 h-1/5">
+          <div className="text-white text-xl md:ml-[54vw] md:mb-[22vh] mb-[50vh] ml-[20vw] absolute  md:w-1/3 h-1/5">
             <p>
               True innovation starts by listening to and addressing the
               individual needs of our clients. We are pioneers and believe that
@@ -92,8 +93,8 @@ export default function Home() {
       <div>
         {menu == "Work" ? (
           <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-            <header className="  mb-11 border-l-[2.8px] border-l-white ml-28 h-44 w-[15vw]    flex flex-col absolute">
-              <div className="flex -ml-6 space-y-3 flex-col  z-50 h-full justify-end  ">
+            <header className=" lg:mb-[5vh] mb-[5vh] border-l-[2.8px] border-l-white lg:ml-[5vw] ml-[5vw]  h-fit     flex flex-col absolute">
+              <div className="flex space-y-3 flex-col  lg:-ml-[1vw] ml-[2vw] z-50 h-full justify-end">
                 <div>
                   <HeaderItem
                     title="Home"
@@ -215,8 +216,8 @@ export default function Home() {
         ) : null}
         {menu == "About" ? (
           <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-            <header className="ml-28 mb-11 border-l-[2.8px] border-l-white  h-44 w-[15vw]    flex flex-col absolute">
-              <div className="flex -ml-6 space-y-3 flex-col z-50 h-full justify-end  ">
+            <header className=" lg:mb-[5vh] mb-[5vh] border-l-[2.8px] border-l-white lg:ml-[5vw] ml-[5vw]  h-fit     flex flex-col absolute">
+              <div className="flex space-y-3 flex-col  lg:-ml-[1vw] ml-[2vw] z-50 h-full justify-end">
                 <div>
                   <HeaderItem
                     title="Home"
@@ -249,11 +250,11 @@ export default function Home() {
             </header>
             <div
               className="
-                absolute h-[100vh] w-[100vw] mb-12 bg-transparent "
+                absolute bg- h-[100vh] w-[100vw] sm:mb-[5vh] mb-[15vh] bg-transparent "
             >
               <Image src="/LOGO.png" layout="fill" objectFit="cover" />
             </div>
-            <div className="text-white text-xl  ml-[17vw] mb-[30vh]  absolute 2xl:w-1/2  2xl:ml-[25.5vw]  w-2/3 h-1/5">
+            <div className="text-white text-xl  ml-[17vw] sm:mb-[30vh] mb-[40vh]  absolute 2xl:w-1/2  2xl:ml-[25.5vw]  w-2/3 h-1/5">
               <p className=" text-center">
                 When you partner with AVS, you’re partnering with our people. We
                 are a talented mix of strategic visionaries, tech geeks,
@@ -265,8 +266,8 @@ export default function Home() {
         ) : null}
         {menu == "Contact" ? (
           <div className="h-[100vh] w-1/4 flex flex-col justify-end">
-            <header className="  mb-11 border-l-[2.8px] border-l-white ml-28 h-44 w-[15vw]    flex flex-col absolute">
-              <div className="flex space-y-3 flex-col -ml-6 z-50 h-full justify-end  ">
+            <header className=" lg:mb-[5vh] mb-[5vh] border-l-[2.8px] border-l-white lg:ml-[5vw] ml-[5vw]  h-fit     flex flex-col absolute">
+              <div className="flex space-y-3 flex-col  lg:-ml-[1vw] ml-[2vw] z-50 h-full justify-end">
                 <div>
                   <HeaderItem
                     title="Home"
