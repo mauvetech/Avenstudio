@@ -2,41 +2,44 @@ import Head from "next/head";
 import Image from "next/image";
 import Header from "../components/Header";
 import Pdfviewer from "../components/Droppin";
-import Popup from "reactjs-popup";
 import "reactjs-popup/dist/index.css";
 import React, { useEffect, useState } from "react";
 import HeaderItem from "../components/HeaderItem";
 import { MenuIcon } from "@heroicons/react/outline";
+import About from "../components/About";
+import Maison from "../components/Maison";
+import Contact from "../components/Contact";
+import Work from "../components/Work";
 
 export default function Home() {
   const [menu, setMenu] = useState("Home");
   const [scale, setScale] = useState(1);
   const [doc, setDoc] = useState("/Droppin.pdf");
+  const [maison, setMaison] = useState(false);
+  const [about, setAbout] = useState(false);
+  const [work, setWork] = useState(false);
   return (
-    <div className="flex w-screen h-screen absolute ">
+    <div className="flex flex-col w-screen h-screen absolute overflow-y-scroll overflow-x-hidden ">
+      <Header homeActive={maison} aboutActive={about} workActive={work} />
       <div className="h-fit w-fit absolute ml-[95vw] mt-[6vh]">
-        <MenuIcon className="h-[2vw]   text-white" />
+        <MenuIcon className="h-[2vw]   text-white cursor-pointer" />
       </div>
 
-      <Image
-        src="/Background.png"
-        layout="fill"
-        className="absolute mix-blend-soft-light saturate-200"
-        objectFit="cover"
-      />
-      <Image
-        src="/blend.jpeg"
-        layout="fill"
-        className="absolute mix-blend-soft-light opacity-20"
-        objectFit="cover"
-      />
+      {/* <div className="bg-red-500">
+        <img
+          src="/Background.png"
+          layout="fill"
+          className="absolute mix-blend-soft-light saturate-200"
+          objectFit="cover"
+        />
+      </div> */}
 
       {/*<img src="/vercel.svg" height={500} width={500} />*/}
       <div className="absolute -left-[36vw] -top-[22vh] w-full h-[60vh]   ">
         <Image src="/LOGO.png" layout="fill" objectFit="contain" />
       </div>
 
-      {menu == "Home" ? (
+      {/* {menu == "Home" ? (
         <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
           <header className=" lg:mb-[5vh] mb-[5vh] border-l-[2.8px] border-l-white lg:ml-[5vw] ml-[5vw]  h-fit     flex flex-col absolute">
             <div className="flex space-y-3 flex-col  lg:-ml-[1vw] ml-[2vw] z-50 h-full justify-end">
@@ -90,47 +93,10 @@ export default function Home() {
 
       {console.log(menu == "Home")}
 
-      <div>
+      <div className="flex flex-col">
         {menu == "Work" ? (
           <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-            <header className=" lg:mb-[5vh] mb-[5vh] border-l-[2.8px] border-l-white lg:ml-[5vw] ml-[5vw]  h-fit     flex flex-col absolute">
-              <div className="flex space-y-3 flex-col  lg:-ml-[1vw] ml-[2vw] z-50 h-full justify-end">
-                <div>
-                  <HeaderItem
-                    title="Home"
-                    onclick={() => {
-                      setMenu("Home");
-                    }}
-                  />
-                </div>
-
-                <div className=" mx-1">
-                  <HeaderItem
-                    title="About"
-                    onclick={() => {
-                      setMenu("About");
-                    }}
-                  />
-                </div>
-                <div className=" -mx-0.5">
-                  <HeaderItem
-                    active={true}
-                    title="Work"
-                    onclick={() => {
-                      setMenu("Work");
-                    }}
-                  />
-                </div>
-                <div className=" mx-4">
-                  <HeaderItem
-                    title="Contact"
-                    onclick={() => {
-                      setMenu("Contact");
-                    }}
-                  />
-                </div>
-              </div>
-            </header>
+            
             <div className="self-center my-[40vh] mx-[40vw]  absolute  z-50">
               <Popup
                 contentStyle={{
@@ -212,59 +178,53 @@ export default function Home() {
                 )}
               </Popup>
             </div>
+            <div className="bg-red-600 w-screen h-screen mt-[100vh]"></div>
           </div>
-        ) : null}
-        {menu == "About" ? (
-          <div className="h-[100vh]  w-1/4 flex flex-col justify-end">
-            <header className=" lg:mb-[5vh] mb-[5vh] border-l-[2.8px] border-l-white lg:ml-[5vw] ml-[5vw]  h-fit     flex flex-col absolute">
-              <div className="flex space-y-3 flex-col  lg:-ml-[1vw] ml-[2vw] z-50 h-full justify-end">
-                <div>
-                  <HeaderItem
-                    title="Home"
-                    onclick={() => {
-                      setMenu("Home");
-                    }}
-                  />
-                </div>
+        ) : null} */}
 
-                <div className=" mx-1">
-                  <HeaderItem title="About" active={true} />
-                </div>
-                <div className=" -mx-0.5">
-                  <HeaderItem
-                    title="Work"
-                    onclick={() => {
-                      setMenu("Work");
-                    }}
-                  />
-                </div>
-                <div className=" mx-4">
-                  <HeaderItem
-                    title="Contact"
-                    onclick={() => {
-                      setMenu("Contact");
-                    }}
-                  />
-                </div>
-              </div>
-            </header>
-            <div
-              className="
-                absolute bg- h-[100vh] w-[100vw] sm:mb-[5vh] mb-[15vh] bg-transparent "
-            >
-              <Image src="/LOGO.png" layout="fill" objectFit="cover" />
-            </div>
-            <div className="text-white text-xl  ml-[17vw] sm:mb-[30vh] mb-[40vh]  absolute 2xl:w-1/2  2xl:ml-[25.5vw]  w-2/3 h-1/5">
-              <p className=" text-center">
-                When you partner with AVS, you’re partnering with our people. We
-                are a talented mix of strategic visionaries, tech geeks,
-                artistics directors, and designers who love marketing and live
-                life to the fullest. If this sounds like you, we should chat !
-              </p>
-            </div>
-          </div>
-        ) : null}
-        {menu == "Contact" ? (
+      <div className="flex flex-col  w-[100vw] h-[100vh]">
+        <div
+          className="w-screen h-screen"
+          onMouseEnter={() => {
+            setMaison(true);
+            console.log(maison);
+          }}
+          onMouseLeave={() => {
+            setMaison(false);
+          }}
+        >
+          <Maison />
+        </div>
+        <div
+          className="w-screen h-screen "
+          onMouseEnter={() => {
+            setAbout(true);
+            console.log(maison);
+          }}
+          onMouseLeave={() => {
+            setAbout(false);
+          }}
+        >
+          <About />
+        </div>
+
+        <div
+          onMouseEnter={() => {
+            setWork(true);
+            console.log(maison);
+          }}
+          onMouseLeave={() => {
+            setWork(false);
+          }}
+        >
+          <Work />
+        </div>
+
+        {/*
+        <Contact />  */}
+      </div>
+
+      {/* {menu == "Contact" ? (
           <div className="h-[100vh] w-1/4 flex flex-col justify-end">
             <header className=" lg:mb-[5vh] mb-[5vh] border-l-[2.8px] border-l-white lg:ml-[5vw] ml-[5vw]  h-fit     flex flex-col absolute">
               <div className="flex space-y-3 flex-col  lg:-ml-[1vw] ml-[2vw] z-50 h-full justify-end">
@@ -300,8 +260,8 @@ export default function Home() {
             </header>
             <h1>C'est le Contact</h1>
           </div>
-        ) : null}
-      </div>
+        ) : null} 
+      </div> */}
     </div>
   );
 }

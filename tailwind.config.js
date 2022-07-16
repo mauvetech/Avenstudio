@@ -10,6 +10,9 @@ module.exports = {
         sans: ["helvetica neue", "Badelion", "Lobster", "myriad-pro"],
         cursive: ["Lobster"],
       },
+      variants: {
+        textColor: ["responsive", "hover", "focus", "group-hover"],
+      },
     },
 
     screens: {
