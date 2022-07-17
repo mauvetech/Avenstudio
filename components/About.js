@@ -4,7 +4,7 @@ import HeaderItem from "./HeaderItem";
 
 function About() {
   return (
-    <div className="absolute h-screen w-screen top-[100vh] flex flex-col justify-end ">
+    <div id="about" className="absolute h-screen w-screen top-[100vh] flex flex-col justify-end ">
       <div className="w-screen absolute h-screen -top-[1vh]">
         <Image
           src="/Background.png"

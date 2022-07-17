@@ -2,12 +2,13 @@ import Image from "next/image";
 import React, { useState } from "react";
 import Popup from "reactjs-popup";
 import Pdfviewer from "../components/Droppin";
+import Projet from "./Projet";
 
 function Work() {
   const [doc, setDoc] = useState("/Droppin.pdf");
   const [scale, setScale] = useState(1);
   return (
-    <div className=" h-screen w-screen top-[198vh] absolute flex">
+    <div id="work" className=" h-screen w-screen top-[198vh] absolute flex">
       <div className="w-screen absolute h-screen ">
         <Image
           src="/Background.png"
@@ -16,7 +17,7 @@ function Work() {
           objectFit="cover"
         />
       </div>
-      <div className="self-center my-[40vh] mx-[40vw]  absolute  z-50">
+      <div className="self-center md:my-[40vh] md:mx-[40vw] absolute  z-50">
         <Popup
           contentStyle={{
             padding: "0px",
@@ -24,16 +25,15 @@ function Work() {
             border: "none",
           }}
           trigger={
-            <h1
+            <div
               onMouseEnter={() => {
                 setDoc("/Droppin.pdf");
                 setScale(1.1);
                 console.log(scale);
               }}
-              className="  helv font-extrabold text-white text-6xl opacity-50 hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px] hover:cursor-pointer"
             >
-              DROPIN
-            </h1>
+              <Projet title="DROPIN" />
+            </div>
           }
           modal
           nested
@@ -41,7 +41,7 @@ function Work() {
           {(close) => (
             <div className=" w-[47vw]  text-transparent text-xs flex-col items-center justify-center overflow-y-scroll scrollbar-hide ">
               <button
-                className=" text-white text-xl close -right-6 absolute"
+                className=" text-white text-[5vh] close -right-6 absolute"
                 onClick={close}
               >
                 &times;
@@ -69,10 +69,9 @@ function Work() {
                 setScale(0.5);
                 console.log(scale);
               }}
+              className="md:ml-0 -ml-[1.5vw]"
             >
-              <h1 className="helv  font-extrabold text-white text-6xl opacity-50 z-50 hover:opacity-100 transition ease-in-out delay-150  hover:scale-150 hover:translate-x-[84px]  hover:cursor-pointer">
-                EDENA
-              </h1>
+              <Projet title="EDENA" />
             </div>
           }
           modal
@@ -81,7 +80,7 @@ function Work() {
           {(close) => (
             <div className=" text-xs ">
               <button
-                className="text-white text-xl close -right-6 absolute"
+                className="text-white text-[5vh] close -right-6 absolute"
                 onClick={close}
               >
                 &times;

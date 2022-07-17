@@ -184,6 +184,7 @@ export default function Home() {
 
       <div className="flex flex-col  w-[100vw] h-[100vh]">
         <div
+          id="home"
           className="w-screen h-screen"
           onMouseEnter={() => {
             setMaison(true);
@@ -196,7 +197,7 @@ export default function Home() {
           <Maison />
         </div>
         <div
-          className="w-screen h-screen "
+          className="w-[100vw] h-[100vh] "
           onMouseEnter={() => {
             setAbout(true);
             console.log(maison);
