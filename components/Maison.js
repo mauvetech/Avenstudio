@@ -23,7 +23,7 @@ function Maison() {
         />
       </div>
 
-      <div className="text-white text-xl md:ml-[54vw] md:mb-[22vh] mb-[25vh]  absolute  md:w-1/3 h-1/5">
+      <div className="text-white text-xl md:ml-[54vw] md:mb-[22vh] mb-[25vh] m-[3vh] absolute  md:w-1/3 h-1/5">
         <p>
           True innovation starts by listening to and addressing the individual
           needs of our clients. We are pioneers and believe that collaborating
